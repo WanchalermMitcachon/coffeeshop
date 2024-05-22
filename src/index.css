@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* จัดคอนเท้นให้อยู่ตรงกลาง */
+body,
+html,
+#root {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fefcf7;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px; /* Adjust max-width as needed */
+  padding: 1rem;
+}
+
+.active {
+  font-weight: 700;
+  color: #fdd6ba;
+}
+
+.modal-enter {
+  transform: translateY(-180%);
+  background-color: red;
+  width: 100%;
+  padding: 500px;
+}
+
+.modal-enter-active {
+  transform: translateY(0);
+  transition: ease-in, transform 0.3s ease-in;
+}
+
+@layer components {
+  .mainButtonDefault {
+    @apply bg-[#0e8784] px-6 py-3 rounded-md text-2xl text-center text-white;
+  }
+
+  .mainButtonHover {
+    @apply bg-[#66D2CF];
+  }
+  .mainButtonDisabled {
+    @apply bg-[#E2DEDB] px-6 py-3  rounded-md text-2xl text-center text-white cursor-not-allowed;
+  }
+}
