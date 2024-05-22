@@ -13,6 +13,7 @@ function NavigationModal({ isOpenHamberger, setIsOpenHamberger }) {
     window.addEventListener("resize", updateImageSrc);
     return () => window.removeEventListener("resize", updateImageSrc);
   }, []);
+
   return (
     <div
       className={`  flex flex-col items-center space-y-4 py-14 
@@ -23,14 +24,26 @@ function NavigationModal({ isOpenHamberger, setIsOpenHamberger }) {
            : "transform translate-y-[-140%]"
        }`}
     >
-      <NavLink to="/" activeClassName>
+      <NavLink
+        to="/"
+        activeClassName
+        onClick={() => setIsOpenHamberger(!isOpenHamberger)}
+      >
         {" "}
         <h1 className="text-h4 font-bold">Home</h1>
       </NavLink>
-      <NavLink to="/about" activeClassName>
+      <NavLink
+        to="/about"
+        activeClassName
+        onClick={() => setIsOpenHamberger(!isOpenHamberger)}
+      >
         <h1 className="text-h4 font-bold">About Us</h1>
       </NavLink>
-      <NavLink to="/createyourplan" activeClassName>
+      <NavLink
+        to="/createyourplan"
+        activeClassName
+        onClick={() => setIsOpenHamberger(!isOpenHamberger)}
+      >
         <h1 className="text-h4 font-bold">Create Your Plan</h1>
       </NavLink>
     </div>

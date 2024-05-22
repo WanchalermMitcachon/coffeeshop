@@ -22,13 +22,13 @@ function Topbar({ isOpenHamberger, setIsOpenHamberger }) {
           >
             <NavLink to="/" activeClassName>
               {" "}
-              <h1 className=" ">HOME</h1>
+              <h1 className="font-bold text-[15px]">HOME</h1>
             </NavLink>
             <NavLink to="/about" activeClassName>
-              <h1 className="">ABOUT US</h1>
+              <h1 className="font-bold text-[15px]">ABOUT US</h1>
             </NavLink>
             <NavLink to="/createyourplan" activeClassName>
-              <h1 className="">CREATE YOUR PLAN</h1>
+              <h1 className="font-bold text-[15px]">CREATE YOUR PLAN</h1>
             </NavLink>
           </div>
 
